@@ -39,6 +39,7 @@ RUN echo "#!/bin/bash \n\
 source /opt/ros/noetic/setup.bash \n\
 source /catkin_ws/devel/setup.bash \n\
 roslaunch tortoisebot_gazebo tortoisebot_playground.launch & \n\
+rosrun tortoisebot_waypoints tortoisebot_action_server.py & \n\
 wait" > /start.sh && chmod +x /start.sh
 
 # Command to run when starting the container
