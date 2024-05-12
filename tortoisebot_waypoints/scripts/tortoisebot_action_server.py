@@ -66,7 +66,7 @@ class WaypointActionClass(object):
            # rospy.loginfo("Error Yaw: %s" % str(err_yaw))
 
             if self._as.is_preempt_requested():
-                rospy.loginfo("The goal has been cancelled/preempted")
+                #rospy.loginfo("The goal has been cancelled/preempted")
                 self._as.set_preempted()
                 success = False
             elif abs(err_yaw) > self._yaw_precision:
@@ -76,7 +76,7 @@ class WaypointActionClass(object):
                 twist_msg.angular.z = max(min(5*err_yaw, 0.65), -0.65)
                 self._pub_cmd_vel.publish(twist_msg)
             else:
-                rospy.loginfo("Go to point")
+                #rospy.loginfo("Go to point")
                 self._state = 'go to point'
                 twist_msg = Twist()
                 twist_msg.linear.x = 0.6
