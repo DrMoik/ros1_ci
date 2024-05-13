@@ -45,12 +45,12 @@ xhost +local:root
     bash start_jenkins.sh
 ```
 
-##Build
+## Build
 1. **Manual Build**
-Locate the jenkins__pid__url.txt file and check for the URL. Login using admin:MASter user:password
-2.**Automatic build**
-Run
-  ```bash
-    echo "$(jenkins_address)github-webhook/"
-```
-Go to https://github.com/DrMoik/ros1_ci/ Copy and paste the ouput on the file webhook.txt and create a pull_request
+  Locate the jenkins__pid__url.txt file and check for the URL. Login using admin:MASter user:password
+2. **Automatic build**
+  Run
+    ```bash
+      echo "$(jenkins_address)github-webhook/"
+    ```
+  Go to https://github.com/DrMoik/ros1_ci/ Copy and paste the ouput on the file webhook.txt and create a pull_request
